@@ -99,4 +99,51 @@
 
 // document.write(`[${somas}]`);
 
-//                      QUESTAO 4
+//                      QUESTAO 5
+
+var A = [
+            [], 
+            [],
+            // [], 
+            // []
+        ];
+for ( var i =0; i< 2;i++){
+
+    for(var j =0; j< 2;j++){
+       A[i][j] = parseInt(prompt("digite um número"));
+    }
+    document.write("[ " + A[i] + "]" + "<br>");
+
+}
+document.write("<br>");
+
+var B = [
+    [], 
+    [],
+    // [], 
+    // [],
+    // [],
+    // []
+];
+for ( var i =0; i< 2;i++){
+
+for(var j =0; j< 2;j++){
+B[i][j] = parseInt(prompt("digite um número"));
+}
+document.write("[ " + B[i] + "]" + "<br>");
+
+}
+
+var multi = [[],[]];
+
+for ( var i =0; i< B.length; i++){
+    for (var j = 0; j< A.length;j++){
+        var m = (A[i][j] * B[j][i]);
+        var b = (A[i][j] * B[i][j+1]);
+        document.write(m +"<br>");
+        document.write("=" + b +"<br>");
+
+    }
+}
+
+// document.write(multi);
