@@ -59,7 +59,7 @@
 //     var n = parseInt(prompt("digite o numero"));
 //     inteiros.push(n);
 // }
-// var maior = inteiros[0];s
+// var maior = inteiros[0];
 
 // for(var i= 1; i<inteiros.length;i++){
 //    if(inteiros[i] > maior){
@@ -101,49 +101,39 @@
 
 //                      QUESTAO 5
 
-var A = [
-            [], 
-            [],
-            // [], 
-            // []
-        ];
-for ( var i =0; i< 2;i++){
+var A = [[],[],/*[],// []*/];
+var B = [[],[],/*[],//[],//[],//[]*/];
+//var produto = [[],[],[],[]];
 
+for ( var i =0; i< 2;i++){
     for(var j =0; j< 2;j++){
        A[i][j] = parseInt(prompt("digite um número"));
     }
     document.write("[ " + A[i] + "]" + "<br>");
-
 }
+
 document.write("<br>");
 
-var B = [
-    [], 
-    [],
-    // [], 
-    // [],
-    // [],
-    // []
-];
 for ( var i =0; i< 2;i++){
-
-for(var j =0; j< 2;j++){
-B[i][j] = parseInt(prompt("digite um número"));
-}
-document.write("[ " + B[i] + "]" + "<br>");
-
+    for(var j =0; j< 2;j++){
+       B[i][j] = parseInt(prompt("digite um número"));
+    }
+    document.write("[ " + B[i] + "]" + "<br>");
 }
 
 var multi = [[],[]];
 
-for ( var i =0; i< B.length; i++){
-    for (var j = 0; j< A.length;j++){
-        var m = (A[i][j] * B[j][i]);
-        var b = (A[i][j] * B[i][j+1]);
-        document.write(m +"<br>");
-        document.write("=" + b +"<br>");
-
-    }
+for ( var i =0; i< A.length; i++){
+    for (var j = 0; j< B[0].length; j++){
+        multi[i][j]=0;
+        for ( var k = 0; k < B.length; k++){
+            multi[i][j] = multi[i][j] + A[i][k] * B[k][j];
+            if (i == 1 && j == 1 && k==1){
+                document.write("| " + multi[i-1] + " |" + "<br>" + "| " + multi[j] + " |");
+            }
+       }
+   }
 }
+//document.write(multi);
 
 // document.write(multi);
