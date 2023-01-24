@@ -99,41 +99,40 @@
 
 // document.write(`[${somas}]`);
 
-//                      QUESTAO 5
+// //                      QUESTAO 5
 
-var A = [[],[],/*[],// []*/];
-var B = [[],[],/*[],//[],//[],//[]*/];
-//var produto = [[],[],[],[]];
+// var A = [[],[],/*[],// []*/];
+// var B = [[],[],/*[],//[],//[],//[]*/];
+// //var produto = [[],[],[],[]];
 
-for ( var i =0; i< 2;i++){
-    for(var j =0; j< 2;j++){
-       A[i][j] = parseInt(prompt("digite um número"));
-    }
-    document.write("[ " + A[i] + "]" + "<br>");
-}
+// for ( var i =0; i< 2;i++){
+//     for(var j =0; j< 2;j++){
+//        A[i][j] = parseInt(prompt("digite um número"));
+//     }
+//     document.write("[ " + A[i] + "]" + "<br>");
+// }
 
-document.write("<br>");
+// document.write("<br>");
 
-for ( var i =0; i< 2;i++){
-    for(var j =0; j< 2;j++){
-       B[i][j] = parseInt(prompt("digite um número"));
-    }
-    document.write("[ " + B[i] + "]" + "<br>");
-}
+// for ( var i =0; i< 2;i++){
+//     for(var j =0; j< 2;j++){
+//        B[i][j] = parseInt(prompt("digite um número"));
+//     }
+//     document.write("[ " + B[i] + "]" + "<br>");
+// }
 
-var multi = [[],[]];
+// var multi = [[],[]];
 
-for ( var i =0; i< A.length; i++){
-    for (var j = 0; j< B[0].length; j++){
-        multi[i][j]=0;
-        for ( var k = 0; k < B.length; k++){
-            multi[i][j] = multi[i][j] + A[i][k] * B[k][j];
-            if (i == 1 && j == 1 && k==1){
-                document.write("| " + multi[i-1] + " |" + "<br>" + "| " + multi[j] + " |");
-            }
-       }
-   }
-}
-//document.write(multi);
+// for ( var i =0; i< A.length; i++){
+//     for (var j = 0; j< B[0].length; j++){
+//         multi[i][j]=0;
+//         for ( var k = 0; k < B.length; k++){
+//             multi[i][j] = multi[i][j] + A[i][k] * B[k][j];
+//             if (i == 1 && j == 1 && k==1){
+//                 document.write("| " + multi[i-1] + " |" + "<br>" + "| " + multi[j] + " |");
+//             }
+//        }
+//    }
+// }
 
-// document.write(multi);
+//                      QUESTÃO 6 
