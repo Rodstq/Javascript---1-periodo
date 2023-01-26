@@ -136,3 +136,46 @@
 // }
 
 //                      QUESTÃO 6 
+
+var A = parseInt(prompt("digite um número"));
+
+var V = [[],[],[]];
+var contagem=0;
+var X = [[],[],[]];
+var num = 0;
+
+// solicitar números
+for( var i = 0; i <3; i++){
+    for(var j = 0; j<3; j++){
+        var n = parseInt(prompt("digite um número para matriz"));
+        V[i][j] = n;
+    }
+}
+
+// contar quantas vezes o número aparece e, se não for o número, adicionar na matriz X
+for( var i = 0; i< 3;i++){
+    for (var j = 0; j<3; j++){
+        if(V[i][j] === A){
+            contagem = contagem+1;
+        } else if(V[i][j] !== A) {
+            X.push(V[i][j]);           
+        }
+    }
+}
+
+// função para exibir uma matriz
+function ExibirMatriz(matriz){
+   for ( var linha = 0; linha < matriz.length; linha++){
+        document.write("| ");
+        for ( var coluna = 0; coluna < matriz[0].length; coluna++){
+            document.write(matriz[linha][coluna] +" ");
+        }
+        document.write("|<br>");
+   }
+}
+
+ExibirMatriz(X);
+document.write("<br>");
+ExibirMatriz(V);
+
+document.write(` o número ${A} aparece ${contagem} vezes`);
